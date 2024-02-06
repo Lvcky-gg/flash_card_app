@@ -1,4 +1,5 @@
-#include "scan.h"
+#include "./make_directory.h"
+#include "./scan.h"
 #include <stdio.h>
 int main() {
   int action = 0;
@@ -9,6 +10,7 @@ int main() {
 
   switch (action) {
   case 1:
+    make_path();
     break;
   case 2:
     break;
