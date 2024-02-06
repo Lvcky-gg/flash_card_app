@@ -1,6 +1,8 @@
 
+#include "make_directory.h"
 #include "./search_directories.h"
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 int make_path(char *directory) {
   char path[100];
@@ -16,7 +18,20 @@ int make_path(char *directory) {
   strncat(path_two, "/", sizeof(path_two) - strlen(path_two) - 1);
   strncat(path_two, path, sizeof(path_two) - strlen(path_two) - 1);
   strncat(path_two, ".csv", sizeof(path_two) - strlen(path_two) - 1);
-  printf("%s", path_two);
+  make_file(path_two);
+  printf("%s has been created!", path_two);
 
   return 1;
+}
+
+int make_file(char *file) {
+  FILE *fptr;
+  fptr = fopen(file, "w");
+  if (fptr == NULL) {
+    printf("Error!");
+    exit(1);
+  }
+  fprintf(fptr, "%s", "question,answer");
+  fclose(fptr);
+  return 0;
 }
