@@ -13,11 +13,11 @@ int main() {
 
   switch (action) {
   case 1:
-    make_path();
+    make_path(build_directory);
     break;
   case 2:
     break;
   }
-  printf("%d", action);
+  // printf("%d", action);
   return 0;
 }
