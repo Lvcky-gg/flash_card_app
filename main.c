@@ -4,7 +4,7 @@
 #include <stdio.h>
 int main() {
   int action = 0;
-  char *build_directory = "~/LvckyCards";
+  char *build_directory = "./LvckyCards";
   check_if_directory(build_directory);
 
   do {
