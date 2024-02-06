@@ -13,7 +13,9 @@ int main() {
 
     switch (action) {
     case 1:
-      make_path(build_directory);
+      if (make_path(build_directory) == -1) {
+        return -1;
+      }
       break;
     case 2:
       break;
