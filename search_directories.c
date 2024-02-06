@@ -8,12 +8,12 @@
 #include <sys/types.h>
 #include <unistd.h>
 bool check_if_directory(char *path) {
-
+  printf("Checking for directory...\n");
   DIR *dir = opendir(path);
   if (dir) {
     /* Directory exists. */
     closedir(dir);
-    printf("Directory already exists!");
+    printf("Directory already exists!\n");
     return false;
   } else if (ENOENT == errno) {
     int ret = 0;
