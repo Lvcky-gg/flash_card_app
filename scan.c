@@ -15,3 +15,13 @@ int welcome() {
 
   return 0;
 }
+
+char *deck_menu() {
+  char val[100];
+  printf("========================================\n");
+  printf("| Which deck would you like to access? |\n");
+  printf("========================================\n");
+  printf("Please Input Name of Deck: ");
+  scanf("%s", val);
+  return val;
+}

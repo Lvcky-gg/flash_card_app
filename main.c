@@ -6,6 +6,7 @@
 int main() {
   int action = 0;
   char *build_directory = "./LvckyCards";
+  char *deck_select;
   check_if_directory(build_directory);
   do {
     do {
@@ -19,6 +20,7 @@ int main() {
       }
       break;
     case 2:
+      deck_select = (deck_menu());
       break;
     case 3:
       break;
