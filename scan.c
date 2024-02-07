@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+static char val[100];
 int welcome() {
   int val;
   printf("=====================================================\n");
@@ -17,7 +17,6 @@ int welcome() {
 }
 
 char *deck_menu() {
-  char val[100];
   printf("========================================\n");
   printf("| Which deck would you like to access? |\n");
   printf("========================================\n");
@@ -26,4 +25,16 @@ char *deck_menu() {
   return val;
 }
 
-int deck_select(char *val) { return 1; }
+int deck_select(char *val) {
+  int ret_val;
+  printf("=========================================\n");
+  printf("| Please select an action on %s deck. |\n", val);
+  printf("=========================================\n");
+  printf("   1. start quiz\n");
+  printf("   2. add new question\n");
+  printf("   3. delete a question\n");
+  printf("   4. modify a question\n");
+  scanf("%d", &ret_val);
+
+  return ret_val;
+}
