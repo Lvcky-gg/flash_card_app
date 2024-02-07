@@ -3,4 +3,5 @@
 
 int welcome();
 char *deck_menu();
+int deck_actions(char *val);
 #endif

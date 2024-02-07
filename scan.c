@@ -25,3 +25,5 @@ char *deck_menu() {
   scanf("%s", val);
   return val;
 }
+
+int deck_select(char *val) { return 1; }
