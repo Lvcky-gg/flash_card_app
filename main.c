@@ -1,6 +1,7 @@
 #include "./make_directory.h"
 #include "./scan.h"
 #include "./search_directories.h"
+#include <stdio.h>
 #include <stdlib.h>
 int main() {
   int action = 0;
@@ -18,6 +19,9 @@ int main() {
       }
       break;
     case 2:
+      break;
+    default:
+      printf("Error: Invalid input!");
       break;
     }
     system("clear");
