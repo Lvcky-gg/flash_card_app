@@ -1,5 +1,5 @@
 
-#include "make_directory.h"
+#include "./make_directory.h"
 #include "./search_directories.h"
 #include <stdio.h>
 #include <stdlib.h>
@@ -21,7 +21,7 @@ int make_path(char *directory) {
   make_file(path_two);
   printf("%s has been created!", path_two);
 
-  return 1;
+  return 0;
 }
 
 int make_file(char *file) {
